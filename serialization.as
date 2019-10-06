@@ -24,7 +24,7 @@ namespace Serialization
 
 		String output = "dict";
 
-		String[]@ keys = dict.getKeys();
+		String@[]@ keys = dict.getKeys();
 		if( @keys == null )
 			return;
 
