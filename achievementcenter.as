@@ -764,7 +764,7 @@ class PlayerAchievementCenter
 
 	bool get_loggedIn()
 	{
-		if( acenter_useAuthFallback )
+		/*if( acenter_useAuthFallback )
 		{
 			String session = ClientCvar::Get( client, "cl_mm_session" );
 			if( !session.isNumerical() )
@@ -773,12 +773,15 @@ class PlayerAchievementCenter
 			return ( sessionID > 0 );
 		}
 		else
-			return ( client.sessionID > 0 );
+			return ( client.sessionID > 0 );*/
+		return false;
 	}
 
 	String get_loginName()
 	{
-		if( m_loginName != "" )
+		return "invalid";
+
+		/*if( m_loginName != "" )
 			return m_loginName;
 
 		if( !loggedIn )
@@ -793,7 +796,7 @@ class PlayerAchievementCenter
 		{
 			m_loginName = client.loginName;
 			return client.loginName;
-		}
+		}*/
 	}
 
 

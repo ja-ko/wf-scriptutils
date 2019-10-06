@@ -189,7 +189,8 @@ class PlayerMMInfo
 
 	int get_sessionID()
 	{
-		if( log_useAuthFallback )
+		return 0;
+		/*if( log_useAuthFallback )
 		{
 			String session = ClientCvar::Get( client, "cl_mm_session" );
 			if( session == "null" || session == "0" )
@@ -197,11 +198,13 @@ class PlayerMMInfo
 			else
 				return session.toInt();
 		}
-		return ( active() ) ? G_GetClient( m_playerNum ).sessionID : 0;
+		return ( active() ) ? G_GetClient( m_playerNum ).sessionID : 0;*/
 	}
 
 	String get_loginName()
 	{
+		return "";
+		/*
 		if( log_useAuthFallback )
 		{
 			String name = ClientCvar::Get( client, "cl_mm_user" );
@@ -210,7 +213,7 @@ class PlayerMMInfo
 			else
 				return name;
 		}
-		return ( active() ) ? G_GetClient( m_playerNum ).loginName : "";
+		return ( active() ) ? G_GetClient( m_playerNum ).loginName : "";*/
 	}
 
 	String get_name()
